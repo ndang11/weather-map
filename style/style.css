@@ -6,9 +6,11 @@
 
 @media (max-width: 480px) {
   body {
-    background-color: black;
+   background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   header {
@@ -32,10 +34,29 @@
   }
 
   input {
-    height: 35px;
+    height: 40px;
     font-size: 20px;
     padding-inline: 8px;
     border-radius: 5px;
     border: none;
+    outline: none;
+    width: 30rem;
+  }
+
+  button {
+    padding: 10px 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: orange;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: white;
   }
 }
