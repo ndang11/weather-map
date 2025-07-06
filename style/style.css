@@ -5,78 +5,101 @@
 }
 
 @media (min-width: 769px) {
-    body {
-        background-color: blue;
-        color: orange;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-image: url("../image/weather.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-items: center;
+  body {
+    background-color: blue;
+    color: orange;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../image/weather.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-items: center;
+  }
+
+  header {
+    box-sizing: border-box;
+    border: 1px solid black;
+    justify-content: center;
+    height: 150vh;
+    width: 60vw;
+    justify-items: center;
+    background-color: black;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    h1 {
+      margin-bottom: 30px;
+      margin-top: 20px;
+      font-size: 3rem;
     }
+  }
 
-    header {
-        box-sizing: border-box;
-        border: 1px solid black;
-        justify-content: center;
-        height: 110vh;
-        width: 40vw;
-        justify-items: center;
-        background-color: black;
-        border-radius: 8px;
-        margin-top: 40px;
-        margin-bottom: 30px;
+  .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
 
-        h1 {
-            margin-bottom: 30px;
-            margin-top: 20px;
-            font-size: 3rem;
-        }
-    }
+  input {
+    height: 40px;
+    font-size: 20px;
+    padding-inline: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 30rem;
+  }
 
-    .search {
-        display: flex;
-        justify-content: center;
-        padding-top: 10px;
-        
-      }
-    
-      input {
-        height: 40px;
-        font-size: 20px;
-        padding-inline: 8px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        width: 30rem;
-      }
+  button {
+    padding: 10px 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: orange;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+  }
 
-      button {
-        padding: 10px 12px;
-        font-weight: 700;
-        border: none;
-        border-radius: 5px;
-        font-size: 20px;
-        background-color: orange;
-        justify-content: center;
-        display: flex;
-        margin-top: 20px;
-        cursor: pointer;
-      }
-    
-      button:hover {
-        color: white;
-      }
+  button:hover {
+    color: white;
+  }
+
+  #five-day-forecast {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .forecast-day {
+    background-color: #f0f4f8;
+    color: green;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .forecast-day:hover {
+    transform: scale(1.05);
+  }
+
+  .forecast-day img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
 }
-
-
-
-
-
 
 @media (max-width: 480px) {
   body {
-   background-color: black;
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -91,16 +114,36 @@
     padding: 5px 8px;
 
     h1 {
-        justify-content: center;
-        display: flex;
+      justify-content: center;
+      display: flex;
     }
+  }
+
+  #five-day-forecast {
+    /* flex-direction: column; */
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    overflow-y: scroll;
+    margin-top: 20px;
+  }
+
+  .forecast-day {
+    background-color: #f0f4f8;
+    color: green;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    width: 60%;
   }
 
   .search {
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    
   }
 
   input {
