@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const apiKey = 'process.env.REACT_APP_WEATHER_API_KEY'
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY
 
   const getWeatherBtn = document.getElementById('get-weather')
   const resetBtn = document.getElementById('reset-weather')
