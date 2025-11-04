@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -17,13 +16,13 @@ body {
 }
 
 header {
-  background: hsla(0, 0%, 100%, 0.149);
+  background: hsl(0 0% 100% / 15%);
   border-radius: 20px;
   padding: 2rem;
   max-width: 500px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 4px 20px hsl(0 0% 0% / 20%);
 }
 
 header h1 {
@@ -95,7 +94,7 @@ button:hover {
   justify-content: flex-start;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: #ffffff1a;
+  background: hsl(0 0% 100% / 10%);
   border-radius: 12px;
   max-width: 100%;
   box-sizing: border-box;
@@ -105,12 +104,12 @@ button:hover {
 }
 
 .forecast-day {
-  background-color: #f0f4f8;
-  color: hsl(120, 100%, 25%);
+  background-color: hsl(210 20% 95%);
+  color: hsl(120 100% 25%);
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px hsl(0 0% 0% / 10%);
   transition: transform 0.2s ease;
   flex-shrink: 0;
 }
@@ -127,7 +126,7 @@ button:hover {
 }
 
 #reset-weather:hover {
-  background: '#fff33';
+  background: #fff3;
 }
 
 @media (max-width: 600px) {
