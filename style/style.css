@@ -16,13 +16,13 @@ body {
 }
 
 header {
-  background: hsl(0 0% 100% / 15%);
+  background: hsl(0deg 0% 100% / 15%);
   border-radius: 20px;
   padding: 2rem;
   max-width: 500px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 20px hsl(0 0% 0% / 20%);
+  box-shadow: 0 4px 20px hsl(0deg 0% 0% / 20%);
 }
 
 header h1 {
@@ -94,7 +94,7 @@ button:hover {
   justify-content: flex-start;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: hsl(0 0% 100% / 10%);
+  background: hsl(0deg 0% 100% / 10%);
   border-radius: 12px;
   max-width: 100%;
   box-sizing: border-box;
@@ -104,12 +104,12 @@ button:hover {
 }
 
 .forecast-day {
-  background-color: hsl(210 20% 95%);
-  color: hsl(120 100% 25%);
+  background-color: hsl(210deg 20% 95%);
+  color: hsl(120deg 100% 25%);
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 4px hsl(0 0% 0% / 10%);
+  box-shadow: 0 2px 4px hsl(0deg 0% 0% / 10%);
   transition: transform 0.2s ease;
   flex-shrink: 0;
 }
