@@ -2,10 +2,10 @@
   --bg-gradient-start: #0f2027;
   --bg-gradient-mid: #203a43;
   --bg-gradient-end: #2c5364;
-  --glass-bg: rgb(255 255 255 / 10%);
-  --glass-border: rgb(255 255 255 / 20%);
+  --glass-bg: #ffffff1a;
+  --glass-border: #ffffff33;
   --text-primary: #fff;
-  --text-secondary: rgb(255 255 255 / 80%);
+  --text-secondary: #ffffffcc;
   --accent-color: #4facfe;
   --accent-hover: #00f2fe;
 }
@@ -36,7 +36,7 @@ body {
   padding: 2.5rem;
   max-width: 650px;
   width: 100%;
-  box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
+  box-shadow: 0 8px 32px #0000004d;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -71,7 +71,7 @@ body {
 .search-box input {
   flex: 1;
   padding: 1rem 1.2rem;
-  background: rgb(255 255 255 / 5%);
+  background: #ffffff0d;
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   color: var(--text-primary);
@@ -81,12 +81,12 @@ body {
 }
 
 .search-box input::placeholder {
-  color: rgb(255 255 255 / 50%);
+  color: #ffffff80;
 }
 
 .search-box input:focus {
   border-color: var(--accent-color);
-  background: rgb(255 255 255 / 10%);
+  background: #ffffff1a;
 }
 
 button {
@@ -103,14 +103,14 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgb(79 172 254 / 40%);
+  box-shadow: 0 4px 15px #4facfe66;
 }
 
 .current-weather-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(0 0 0 / 10%);
+  background: #0000001a;
   border-radius: 16px;
   padding: 2rem 1.5rem;
 }
@@ -126,7 +126,7 @@ button:hover {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 20%));
+  filter: drop-shadow(0 4px 6px #00000033);
   display: none;
 }
 
@@ -152,7 +152,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(255 255 255 / 5%);
+  background: #ffffff0d;
   padding: 0.8rem 1.2rem;
   border-radius: 12px;
   flex: 1;
@@ -191,7 +191,7 @@ button:hover {
   overflow-x: auto;
   padding-bottom: 0.5rem;
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) rgb(0 0 0 / 10%);
+  scrollbar-color: var(--accent-color) #0000001a;
 }
 
 #five-day-forecast::-webkit-scrollbar {
@@ -199,7 +199,7 @@ button:hover {
 }
 
 #five-day-forecast::-webkit-scrollbar-track {
-  background: rgb(0 0 0 / 10%);
+  background: #0000001a;
   border-radius: 10px;
 }
 
@@ -209,7 +209,7 @@ button:hover {
 }
 
 .forecast-day {
-  background: rgb(255 255 255 / 5%);
+  background: #ffffff0d;
   border: 1px solid var(--glass-border);
   padding: 1.2rem;
   border-radius: 16px;
@@ -223,7 +223,7 @@ button:hover {
 
 .forecast-day:hover {
   transform: translateY(-5px);
-  background: rgb(255 255 255 / 10%);
+  background: #ffffff1a;
 }
 
 .forecast-day h3 {
@@ -236,7 +236,7 @@ button:hover {
 .forecast-day img {
   width: 70px;
   height: 70px;
-  filter: drop-shadow(0 2px 4px rgb(0 0 0 / 20%));
+  filter: drop-shadow(0 2px 4px #00000033);
 }
 
 .forecast-day .temp {
@@ -269,7 +269,7 @@ button:hover {
 }
 
 .reset-btn {
-  background: rgb(255 255 255 / 10%);
+  background: #ffffff1a;
   color: var(--text-primary);
   border: 1px solid var(--glass-border);
   margin-top: 0.5rem;
@@ -277,7 +277,7 @@ button:hover {
 }
 
 .reset-btn:hover {
-  background: rgb(255 255 255 / 20%);
+  background: #ffffff33;
   transform: none;
   box-shadow: none;
 }
@@ -297,19 +297,24 @@ button:hover {
     padding: 1.5rem;
     border-radius: 20px;
   }
+  
   .app-header h1 {
     font-size: 1.8rem;
   }
+
   .search-box {
     flex-direction: column;
   }
+
   .search-box input {
     width: 100%;
   }
+
   button {
     padding: 1rem;
     width: 100%;
   }
+
   .weather-main {
     flex-direction: column;
     text-align: center;
@@ -318,16 +323,19 @@ button:hover {
   #temprature {
     font-size: 2.5rem;
   }
+
   #weather-info {
     flex-direction: column;
     gap: 0.8rem;
   }
+
   .info-item {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     padding: 1rem;
   }
+
   .info-value {
     margin-top: 0;
   }
