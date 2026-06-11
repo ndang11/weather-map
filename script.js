@@ -1,6 +1,7 @@
+import { CONFIG } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY
+  const apiKey = CONFIG.API_KEY;
 
   const getWeatherBtn = document.getElementById('get-weather')
   const resetBtn = document.getElementById('reset-weather')
@@ -12,11 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return
     }
 
-    // URLs
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`
 
-    // Fetch current weather
     fetch(currentWeatherUrl)
       .then(res => {
         if (!res.ok) throw new Error('City not found.')
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         displayCurrentWeather(data)
 
-        // Then fetch forecast
         return fetch(forecastUrl)
       })
       .then(res => res.json())
@@ -44,19 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   function displayCurrentWeather (data) {
-    const temp = data.main.temp
+    const temp = Math.round(data.main.temp)
     const description = data.weather[0].description
     const humidity = data.main.humidity
     const windSpeed = data.wind.speed
     const iconCode = data.weather[0].icon
 
-    document.getElementById('temprature').textContent = `Temperature: ${temp}°C`
+    document.getElementById('temprature').innerHTML = `${temp}&deg;C`
     document.getElementById('weather-info').innerHTML = `
-      Description: ${description}<br>
-      Humidity: ${humidity}%<br>
-      Wind Speed: ${windSpeed} m/s
+      <div class="info-item">
+        <span class="info-label">Condition</span>
+        <span class="info-value" style="text-transform: capitalize;">${description}</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Humidity</span>
+        <span class="info-value">${humidity}%</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Wind</span>
+        <span class="info-value">${windSpeed} m/s</span>
+      </div>
     `
-    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`
   }
 
   function displayForecast (data) {
@@ -101,12 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const dayElement = document.createElement('div')
       dayElement.className = 'forecast-day'
       dayElement.innerHTML = `
-        <h3>${day}</h3>
-        <img src="https://openweathermap.org/img/wn/${mostCommonIcon}.png" alt="${mostCommonDescription}">
-        <p>${avgTemp}°C</p>
-        <p>${mostCommonDescription}</p>
-        <p>Humidity: ${avgHumidity}%</p>
-        <p>Wind: ${avgWind} m/s</p>
+        <h3>${day.substring(0, 3)}</h3>
+        <img src="https://openweathermap.org/img/wn/${mostCommonIcon}@2x.png" alt="${mostCommonDescription}">
+        <p class="temp">${Math.round(avgTemp)}&deg;C</p>
+        <p class="desc">${mostCommonDescription}</p>
+        <div class="forecast-details">
+          <span>💧 ${avgHumidity}%</span>
+          <span>💨 ${avgWind}m/s</span>
+        </div>
       `
       forecastContainer.appendChild(dayElement)
     })
