@@ -3,9 +3,9 @@
   --bg-gradient-mid: #203a43;
   --bg-gradient-end: #2c5364;
   --glass-bg: #ffffff1a;
-  --glass-border: #ffffff33;
+  --glass-border: #fff3;
   --text-primary: #fff;
-  --text-secondary: #ffffffcc;
+  --text-secondary: #fffc;
   --accent-color: #4facfe;
   --accent-hover: #00f2fe;
 }
@@ -48,6 +48,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -126,7 +127,7 @@ button:hover {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 6px #00000033);
+  filter: drop-shadow(0 4px 6px #0003);
   display: none;
 }
 
@@ -236,7 +237,7 @@ button:hover {
 .forecast-day img {
   width: 70px;
   height: 70px;
-  filter: drop-shadow(0 2px 4px #00000033);
+  filter: drop-shadow(0 2px 4px #0003);
 }
 
 .forecast-day .temp {
@@ -277,7 +278,7 @@ button:hover {
 }
 
 .reset-btn:hover {
-  background: #ffffff33;
+  background: #fff3;
   transform: none;
   box-shadow: none;
 }
@@ -287,6 +288,7 @@ button:hover {
   .app-container {
     padding: 2rem;
   }
+
   #temprature {
     font-size: 3rem;
   }
@@ -297,7 +299,7 @@ button:hover {
     padding: 1.5rem;
     border-radius: 20px;
   }
-  
+
   .app-header h1 {
     font-size: 1.8rem;
   }
@@ -320,6 +322,7 @@ button:hover {
     text-align: center;
     gap: 0.5rem;
   }
+
   #temprature {
     font-size: 2.5rem;
   }
