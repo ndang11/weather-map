@@ -1,7 +1,7 @@
-import { CONFIG } from './config.js';
+import { CONFIG } from './config.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const apiKey = CONFIG.API_KEY;
+  const apiKey = CONFIG.API_KEY
 
   const getWeatherBtn = document.getElementById('get-weather')
   const resetBtn = document.getElementById('reset-weather')
