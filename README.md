@@ -1,4 +1,4 @@
-#  Weather App
+# Weather App
 
 A dynamic and responsive web application that allows users to fetch and display the current weather and a 5-day forecast for any city.
 
@@ -29,7 +29,7 @@ Checking accurate and real-time weather information shouldn't be complicated. Th
 **Other Tools:**  
 - Git & GitHub  
 
-##  Features
+## Features
 
 - **City Search:** Real-time weather fetching based on user input.
 - **Current Weather:** Displays temperature in Celsius, weather description, humidity, and wind speed.
