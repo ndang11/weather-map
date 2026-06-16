@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <main class="app-container">
+      <header class="app-header">
+        <h1>Weather Forecast</h1>
+      </header>
+      
+      <section class="search-section">
+        <div class="search-box">
+          <input type="text" id="city" placeholder="Enter city name..." autocomplete="off" />
+          <button id="get-weather">Search</button>
+        </div>
+      </section>
+
+      <section class="current-weather-section">
+        <div class="weather-main">
+          <img id="weather-icon" alt="" />
+          <div id="temprature"></div>
+        </div>
+        <div id="weather-info"></div>
+      </section>
+
+      <section class="forecast-section">
+        <h2>5-Day Forecast</h2>
+        <div id="five-day-forecast"></div>
+      </section>
+
+      <button id="reset-weather" class="reset-btn">Reset</button>
+    </main>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./config.js"></script>
+  </body>
 </html>
